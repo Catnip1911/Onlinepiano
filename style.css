@@ -1,0 +1,114 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: rgb(148,185,255);
+background: linear-gradient(315deg, rgba(148,185,255,1) 0%, rgba(205,255,208,1) 76%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  padding: 30px 0 0px 0;
+}
+
+  .like-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .like-button .heart-icon {
+    height: 100px;
+    width: 100px;
+    background: url("images/heart.png");
+    background-position: left;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .like-button .heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+  }
+  
+  @keyframes like-anim {
+    to {
+      background-position: right;
+    }
+  }
+  
+  .like-button .heart-bg {
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+  }
+  
+  .like-button .heart-bg:hover {
+    background: rgba(255, 192, 200, 0.7);
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button .likes-amount {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #888;
+    font-weight: 900;
+   
+  }
+  .piano {
+    background:#272547;
+    border-radius: 30px;
+    padding: 50px 25px 30px 25px;
+    display: flex;
+
+  }
+  
+  .key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+  }
+  
+  .white {
+    --width: 80px;
+    background-color: white;
+    border: 1px solid #272547;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .white.active {
+    background-color: #ccc;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .black {
+    --width: 50px;
+    background-color:#272547;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+  }
+  
+  .black.active {
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+  }
+  
