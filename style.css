@@ -30,7 +30,7 @@ background: linear-gradient(315deg, rgba(148,185,255,1) 0%, rgba(205,255,208,1) 
   .like-button .heart-icon {
     height: 100px;
     width: 100px;
-    background: url("images/heart.png");
+    background: url("Images/heart.png");
     background-position: left;
     cursor: pointer;
     position: absolute;
